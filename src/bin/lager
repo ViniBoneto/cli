@@ -1,0 +1,27 @@
+#!/usr/bin/env node
+'use strict';
+
+const icli = require('comquirer');
+
+// add base commands
+require('../cli/new')(icli);
+require('../cli/disable-default')(icli);
+
+// Check if the user calls the command from a lager project
+require('../load-lager-project')(icli)
+.then(lager => {
+  icli.getProgram().parse(process.argv);
+});
+
+
+// We fire the "registerCommands" event so plugins can add their own commands
+// lager.fire('registerCommands', icli)
+// .spread(() => {
+//   // Finally, we execute the cli
+//   icli.getProgram().parse(process.argv);
+//
+//   // Display help if no command was provided
+//   if (!process.argv.slice(2).length) {
+//     icli.getProgram().outputHelp();
+//   }
+// });
