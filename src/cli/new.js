@@ -13,7 +13,7 @@ module.exports = (icli) => {
   const choicesLists = getChoices();
 
   const config = {
-    section: 'Core CLI commands',
+    section: 'Lager CLI core',
     cmd: 'new',
     description: 'create a new project',
     parameters: [{
@@ -72,7 +72,7 @@ module.exports = (icli) => {
     .then(() => {
       const projectConfig = {
         name: parameters.projectName || 'A Lager project',
-        plugins: parameters.plugins
+        plugins: parameters.plugins.map((pluginName) => '@lager/' + pluginName)
       };
       return fs.writeFileAsync(configFilePath + path.sep + 'lager.json', JSON.stringify(projectConfig, null, 2));
     })

@@ -9,17 +9,12 @@ const path = require('path');
 
 module.exports = function loadLagerProject(icli) {
   const lager = getLager();
-
   if (lager) {
     // If the command is launched from a lager project, we initialize the Lager instance
     return lager.init(getConfig())
     .then(() => {
       // We fire the "registerCommands" event so plugins can add their own commands
       return lager.fireConcurrently('registerCommands', icli);
-    })
-    .spread(() => {
-      // Finally, we execute the cli
-      icli.getProgram().parse(process.argv);
     });
   }
 
