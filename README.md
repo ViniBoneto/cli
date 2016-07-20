@@ -1,7 +1,7 @@
 Lager CLI
 ===
 
-[![Build Status](https://travis-ci.org/lagerjs/cli.svg?branch=dev)](https://travis-ci.org/lagerjs/cli)
+[![Build Status](https://travis-ci.org/lagerjs/cli.svg)](https://travis-ci.org/lagerjs/cli)
 [![bitHound Overall Score](https://www.bithound.io/github/lagerjs/cli/badges/score.svg)](https://www.bithound.io/github/lagerjs/cli)
 [![bitHound Dependencies](https://www.bithound.io/github/lagerjs/cli/badges/dependencies.svg)](https://www.bithound.io/github/lagerjs/cli/dev/dependencies/npm)
 [![bitHound Code](https://www.bithound.io/github/lagerjs/cli/badges/code.svg)](https://www.bithound.io/github/lagerjs/cli)
