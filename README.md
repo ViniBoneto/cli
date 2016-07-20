@@ -13,7 +13,7 @@ Installation
 ---
 
 ```bash
-npm install -g @lager/lager
+npm install -g @lager/cli
 ```
 
 Create a new project
