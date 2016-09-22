@@ -30,7 +30,7 @@ function getLager() {
   try {
     return require(path.join(process.cwd(), 'node_modules', '@lager', 'lager'));
   } catch (e) {
-    if (e.code !== 'MODULE_NOT_FOUND' || e.message.slice(e.message.length - 13, -1) !== '@lager/lager') {
+    if (e.code !== 'MODULE_NOT_FOUND' || e.message.slice(e.message.length - 13, -1) !== '@lager' + path.sep + 'lager') {
       throw e;
     }
     return void 0;
